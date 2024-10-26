@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <title>Service</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Booking Service</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
+        alert("Your message has been successfully sent! We’ll review it and respond as soon as possible.");
+      }
+    </script>
+  </head>
+  <body> 
+    <div class="services">
+      <div class="div">
+        <div class="div-3">
+          <div class="book-sub">Book your Appointment Now</div>
+          <div class="book-text">Please fill in the form bellow accurately so that we can serve you well</div>
+          <div class="frame">
+            <div class="frame-box">
+              <div class="appointment-box">
+                <form id="booking-form">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    
+                    <label for="service">Choose Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="">--Select a Service--</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="vet">Healthcare</option>
+                        <option value="boarding">Training</option>
+                        <option value="boarding">Daycare</option>
+                    </select>
+                    
+                    <label for="specialist">Choose Specialist:</label>
+                    <select id="specialist" name="specialist" required>
+                        <option value="">--Select a Specialist--</option>
+                        <option value="dr_smith">Drh. Santanu</option>
+                        <option value="dr_jones">Drh. Pinasthika</option>
+                        <option value="ms_wilson">Drh. Middleton</option>
+                        <option value="ms_wilson">Drh. Franklin</option>
+                    </select>
+                    
+                    <label for="date">Choose Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="time">Choose Time:</label>
+                    <input type="time" id="time" name="time" required>
+                    
+                    <label>
+                        <input type="checkbox" id="home-call" name="home-call">
+                        Please check this section if you would like a home call service
+                    </label>
+                    
+                    <div id="address-section" class="hidden">
+                        <label for="address">Home Address:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                <script>
+                    document.getElementById('home-call').addEventListener('change', function() {
+                        var addressSection = document.getElementById('address-section');
+                        if (this.checked) {
+                            addressSection.classList.remove('hidden');
+                        } else {
+                            addressSection.classList.add('hidden');
+                        }
+                    });
+                </script>
+              </div>
+            </div>
+          </div> 
+          <div class="grooming">
+            <div class="overlap-group-3">
+              <div class="rectangle"></div>
+              <div class="img-wrapper"><img class="img-2" src="img/grooming.png" /></div>
+            </div>
+            <div class="g">Grooming</div>
+          </div>
+          <div class="healthcare">
+            <div class="overlap-2">
+              <div class="rectangle-2"></div>
+              <div class="healthcare-wrapper"><img class="img-2" src="img/healthcare.png" /></div>
+            </div>
+            <div class="h">Healthcare</div>
+          </div>
+          <div class="training">
+            <div class="overlap-3">
+              <div class="rectangle-3"></div>
+              <div class="training-wrapper"><img class="training-2" src="img/training.png" /></div>
+            </div>
+            <div class="t">Training</div>
+          </div>
+          <div class="daycare">
+            <div class="overlap-4">
+              <div class="rectangle-4"></div>
+              <div class="img-wrapper"><img class="img-2" src="img/daycare.png" /></div>
+            </div>
+            <div class="dc">Daycare</div>
+          </div>
+        </div>
+        <div class="overlap-5">
+          <div class="overlap-wrapper">
+            <div class="overlap-6">
+              <div class="header-2">Book Service</div>
+              <div class="rectangle-5">
+              </div>
+            </div>
+          </div>
+          <div class="navbar">
+            <div class="logo">
+              <div class="name-2">Miaou Maisone</div>
+              <div class="logo-2">
+                <div class="overlap-group-4">
+                  <img class="group-3" src="img/group-3.png" />
+                  <img class="ellipse" src="img/ellipse-8-4.svg" />
+                  <img class="ellipse-2" src="img/ellipse-8-5.svg" />
+                  <img class="ellipse-3" src="img/ellipse-9-2.svg" />
+                  <div class="ellipse-4"></div>
+                  <div class="ellipse-5"></div>
+                </div>
+              </div>
+            </div>
+            <div class="nav">
+              <div class="navbar-2">
+                <a href="../home.html"><div class="text-wrapper-36">Home</div></a>
+                <a href="../About us/index.html"><div class="text-wrapper-36">About Us</div></a>
+                <a href="../Service/service.html"><div class="text-wrapper-36">Services</div></a>
+                <a href="../Contact/contact.html"><div class="text-wrapper-36">Contact</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div class="footer"> 
+      <footer class="class"> 
+          <div class="primary-footer"> 
+              <div class="text-wrapper">Miaou Maison</div> 
+              <p class="div">Purrfect Care for Your Furry Friend</p> 
+              <div class="links"> <div class="buttons-container-wrapper"> 
+                  <div class="buttons-container"> 
+                      <a href="../home.html" class="quicklink">Home</a>
+                      <a href="../About us/index.html" class="quicklink">About Us</a>
+                      <a href="../Service/service.html" class="quicklink">Services</a>
+                      <a href="../Contact/contact.html" class="quicklink">Contact</a>
+                </div> 
+              </div> 
+          </div> 
+      </div> 
+      <div class="secondary-footer"> 
+          <div class="frame"> 
+              <img class= "img" src="img/miaou.png">
+              <p class="cr">© 2024 Miaou Maison. All Rights Reserved.</p> 
+              <div class="frame-2"> 
+                  <a href="https://www.instagram.com/catcare_id/%22%3E"><img class="social-network" src="img/ig.png"/></a>
+                  <a href="https://www.facebook.com/icatcare/%22%3E"><img class="social-network" src="img/fb.png"/></a>
+                  <a href="https://x.com/iCatCare%22%3E"><img class="social-network" src="img/twitter.png"/></a>
+              </div> 
+          </div> 
+      </div> 
+  </footer> 
+</html>
